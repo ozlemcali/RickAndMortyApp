@@ -8,7 +8,7 @@
 import UIKit
 
 class EpisodeDetailVC: UIViewController {
-
+    
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var episodeLabel: UILabel!
@@ -18,11 +18,10 @@ class EpisodeDetailVC: UIViewController {
         super.viewDidLoad()
         setupUI()
     }
-   
+    
     func setupUI(){
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-        
         self.nameLabel.text = viewModel.results.name
         self.episodeLabel.text = viewModel.results.episode
         self.dateLabel.text = viewModel.results.air_date
@@ -31,6 +30,7 @@ class EpisodeDetailVC: UIViewController {
 }
 
 
+//MARK: - Collection View
 extension EpisodeDetailVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.results.characters!.count
@@ -39,21 +39,18 @@ extension EpisodeDetailVC: UICollectionViewDataSource, UICollectionViewDelegate,
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell2", for: indexPath) as! LocationDetailCollectionCell
         let data = viewModel.results
-       // cell.setupUI(data.characters![indexPath.row])
+        // cell.setupUI(data.characters![indexPath.row])
         return cell
-            
+        
         
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-           
+        
         let width = self.view.frame.width / 3
         let height = self.view.frame.height / 6
-           
+        
         return CGSize(width: width, height: height)
-       }
-    
-    
-    
+    }
     
 }
 

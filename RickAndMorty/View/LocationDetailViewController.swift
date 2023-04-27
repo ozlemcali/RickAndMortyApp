@@ -8,7 +8,7 @@
 import UIKit
 
 class LocationDetailViewController: UIViewController {
-
+    
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var dimensionLabel: UILabel!
     @IBOutlet var typeLabel: UILabel!
@@ -17,8 +17,8 @@ class LocationDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       setupUI()
+        
+        setupUI()
     }
     func setupUI(){
         self.collectionView.delegate = self
@@ -31,26 +31,27 @@ class LocationDetailViewController: UIViewController {
     }
 }
 
+// MARK: - Collection View with Cell
 extension LocationDetailViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.results.residents!.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! LocationDetailCollectionCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.detailCellIdentifier, for: indexPath) as! LocationDetailCollectionCell
         let data = viewModel.results
         cell.setupUI(data.residents![indexPath.row])
         return cell
-            
+        
         
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-           
+        
         let width = self.view.frame.width / 3
         let height = self.view.frame.height / 6
-           
+        
         return CGSize(width: width, height: height)
-       }
+    }
     
     
     

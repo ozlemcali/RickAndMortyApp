@@ -11,5 +11,9 @@ struct Constants {
     static let charactersEndpoint = "/character"
     static let locationsEndpoint = "/location"
     static let episodesEndpoint = "/episode"
-    
+    static let characterCellIdentifier = "characterCell"
+    static let detailCellIdentifier = "cell"
+    static let toDetailsegue = "toDetailVC"
+    static let toLocationDetailsegue = "toLocationDetailVC"
+    static let toEpisodeDetailsegue = "toEpisodeDetailVC"
 }

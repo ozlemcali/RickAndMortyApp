@@ -10,8 +10,6 @@ import Alamofire
 
 class LocationViewModel {
     var locations = [Location]()
-    //var results: [Location] = []
-        
         var numberOfCharacters: Int {
         return locations.count
     }

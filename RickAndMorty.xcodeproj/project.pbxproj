@@ -26,7 +26,6 @@
 		C346D83929F93C4200E35E27 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C346D83829F93C4200E35E27 /* CharacterViewModel.swift */; };
 		C346D83C29F93C6E00E35E27 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C346D83B29F93C6E00E35E27 /* Alamofire */; };
 		C346D83F29F93C7E00E35E27 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = C346D83E29F93C7E00E35E27 /* AlamofireImage */; };
-		C346D84529F93FFA00E35E27 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = C346D84429F93FFA00E35E27 /* SwiftyJSON */; };
 		C346D84B29F962F900E35E27 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C346D84A29F962F900E35E27 /* LocationViewController.swift */; };
 		C346D84D29F9638700E35E27 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C346D84C29F9638700E35E27 /* LocationViewModel.swift */; };
 		C346D84F29F966F100E35E27 /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C346D84E29F966F100E35E27 /* CharacterDetailViewModel.swift */; };
@@ -66,7 +65,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C346D84529F93FFA00E35E27 /* SwiftyJSON in Frameworks */,
 				C346D83C29F93C6E00E35E27 /* Alamofire in Frameworks */,
 				C346D83F29F93C7E00E35E27 /* AlamofireImage in Frameworks */,
 			);
@@ -94,9 +92,9 @@
 		C32BE85A29F873F20098819D /* RickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
-				C346D85229F9692200E35E27 /* Extensions */,
 				C32BE86929F873F30098819D /* Info.plist */,
 				C346D82C29F9317900E35E27 /* Base */,
+				C346D85229F9692200E35E27 /* Extensions */,
 				C346D83129F9393A00E35E27 /* Cells */,
 				C346D82D29F9318400E35E27 /* Constants */,
 				C346D82B29F9317000E35E27 /* Model */,
@@ -204,7 +202,6 @@
 			packageProductDependencies = (
 				C346D83B29F93C6E00E35E27 /* Alamofire */,
 				C346D83E29F93C7E00E35E27 /* AlamofireImage */,
-				C346D84429F93FFA00E35E27 /* SwiftyJSON */,
 			);
 			productName = RickAndMorty;
 			productReference = C32BE85829F873F20098819D /* RickAndMorty.app */;
@@ -237,7 +234,6 @@
 			packageReferences = (
 				C346D83A29F93C6E00E35E27 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				C346D83D29F93C7E00E35E27 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
-				C346D84329F93FFA00E35E27 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = C32BE85929F873F20098819D /* Products */;
 			projectDirPath = "";
@@ -520,14 +516,6 @@
 				minimumVersion = 4.0.0;
 			};
 		};
-		C346D84329F93FFA00E35E27 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -540,11 +528,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C346D83D29F93C7E00E35E27 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
 			productName = AlamofireImage;
-		};
-		C346D84429F93FFA00E35E27 /* SwiftyJSON */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C346D84329F93FFA00E35E27 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
-			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
